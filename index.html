@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pooja S | Java & Spring Boot Backend Developer</title>
+  <meta name="description" content="Portfolio of Pooja S — Computer Science Engineering graduate specializing in Java, Spring Boot and backend development. Explore projects, skills, education and experience." />
+  <meta name="keywords" content="Pooja S, Java Developer, Spring Boot Developer, Backend Developer, Computer Science Engineer, Portfolio" />
+  <meta name="author" content="Pooja S" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Pooja S | Java & Spring Boot Backend Developer" />
+  <meta property="og:description" content="Computer Science Engineering graduate passionate about Java backend development, Spring Boot, and scalable applications." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/og-image.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Cursor Glow -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- Animated Background -->
+  <div class="bg-wrapper" aria-hidden="true">
+    <canvas id="particles"></canvas>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <!-- Loader -->
+  <div class="loader" id="loader">
+    <div class="loader-ring"></div>
+    <div class="loader-text">PS<span>.</span></div>
+  </div>
+
+  <!-- Progress bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="logo">Pooja<span class="dot">.</span>S</a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#home" class="nav-link active" data-section="home">Home</a>
+        <a href="#about" class="nav-link" data-section="about">About</a>
+        <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+        <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+        <a href="#education" class="nav-link" data-section="education">Education</a>
+        <a href="#experience" class="nav-link" data-section="experience">Experience</a>
+        <a href="#certificates" class="nav-link" data-section="certificates">Certificates</a>
+        <a href="/Pooja_S_Resume.pdf" class="nav-link" data-section="resume">Resume</a>
+        <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#home" class="mobile-link">Home</a>
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#skills" class="mobile-link">Skills</a>
+    <a href="#projects" class="mobile-link">Projects</a>
+    <a href="#education" class="mobile-link">Education</a>
+    <a href="#experience" class="mobile-link">Experience</a>
+    <a href="#certificates" class="mobile-link">Certificates</a>
+    <a href="/Pooja_S_Resume.pdf" class="mobile-link">Resume</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+  </div>
+
+  <main>
+    <!-- HOME / HERO -->
+    <section id="home" class="section hero">
+      <div class="hero-container">
+        <div class="hero-text" data-reveal>
+          <p class="eyebrow">Hello, I'm</p>
+          <h1 class="hero-name">Pooja <span class="gradient-text">S</span></h1>
+          <h2 class="hero-typing">
+            <span id="typedText"></span><span class="cursor-blink">|</span>
+          </h2>
+          <p class="hero-desc">
+            I am a Computer Science Engineering graduate passionate about Java Backend Development and modern web technologies. I enjoy building scalable applications and continuously learning new technologies.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="/Pooja_S_Resume.pdf" class="btn btn-primary" download>
+              <span>Download Resume</span>
+            </a>
+            <a href="#contact" class="btn btn-outline">
+              <span>Contact Me</span>
+            </a>
+            <a href="#projects" class="btn btn-ghost">
+              <span>View Projects</span>
+            </a>
+          </div>
+
+          <div class="hero-socials">
+            <a href="https://github.com/pooja9617" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.78-.25.78-.55v-2.15c-3.2.7-3.87-1.34-3.87-1.34-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.72-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.06 11.06 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.27 5.69.42.36.78 1.07.78 2.16v3.2c0 .3.2.66.79.55A11.5 11.5 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5Z"/></svg>
+            </a>
+            <a href="https://linkedin.com/in/pooja-s-b73a4b309" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>
+            </a>
+            <a href="mailto:poojasuresh1903@gmail.com" class="social-icon" aria-label="Email">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M1.5 4.5h21c.55 0 1 .45 1 1v13c0 .55-.45 1-1 1h-21c-.55 0-1-.45-1-1v-13c0-.55.45-1 1-1Zm1.06 1.5 9.44 7.09L21.44 6H2.56Zm18.94 1.62-9.03 6.78a1 1 0 0 1-1.2 0L2.5 7.62V18h19V7.62Z"/></svg>
+            </a>
+          </div>
+
+          <div class="hero-location">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 2C7.8 2 4.5 5.3 4.5 9.5c0 5.6 6.4 11.5 7 12 .3.3.7.3 1 0 .6-.5 7-6.4 7-12C19.5 5.3 16.2 2 12 2Zm0 10.2a2.7 2.7 0 1 1 0-5.4 2.7 2.7 0 0 1 0 5.4Z"/></svg>
+            Panachamoodu, Thiruvananthapuram, Kerala
+          </div>
+        </div>
+
+        <div class="hero-visual" data-reveal>
+          <div class="avatar-frame">
+            <div class="avatar-ring">
+              
+            </div>
+            <div class="avatar-ring ring-2"></div>
+            <div class="avatar-glow"></div>
+            <div class="avatar-monogram"><span><img src="/pooja.jpeg" alt=""></span></div>
+            <div class="floating-badge badge-1">☕ Java</div>
+            <div class="floating-badge badge-2">🍃 Spring Boot</div>
+            <div class="floating-badge badge-3">🗄️ SQL</div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container">
+        <p class="section-eyebrow" data-reveal>Get to know me</p>
+        <h2 class="section-title" data-reveal>About <span class="gradient-text">Me</span></h2>
+
+        <div class="about-grid">
+          <div class="about-text" data-reveal>
+            <p>I am a Computer Science Engineering graduate from <strong>Narayanaguru College of Engineering</strong>, affiliated with <strong>Anna University</strong>.</p>
+            <p>I enjoy solving real-world problems using Java and modern web technologies.</p>
+            <p>I am passionate about <strong>Backend Development, Spring Boot, APIs, Database Management,</strong> and Software Engineering.</p>
+            <p>I continuously improve my technical knowledge by building projects and learning industry-standard technologies.</p>
+          </div>
+
+          <div class="about-card glass-card" data-reveal>
+            <h3 class="card-heading">Personal Info</h3>
+            <ul class="info-list">
+              <li><span>Name</span><strong>Pooja S</strong></li>
+              <li><span>Age</span><strong>22</strong></li>
+              <li><span>Degree</span><strong>Bachelor of Engineering</strong></li>
+              <li><span>Branch</span><strong>Computer Science Engineering</strong></li>
+              <li><span>University</span><strong>Anna University</strong></li>
+              <li><span>CGPA</span><strong>8.20</strong></li>
+              <li><span>Location</span><strong>Panachamoodu, Kerala</strong></li>
+              <li><span>Languages</span><strong>English, Malayalam, Tamil, Hindi</strong></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <div class="container">
+        <p class="section-eyebrow" data-reveal>What I work with</p>
+        <h2 class="section-title" data-reveal>My <span class="gradient-text">Skills</span></h2>
+
+        <div class="skills-grid">
+          <div class="skill-category glass-card" data-reveal>
+            <h3 class="card-heading">Frontend</h3>
+            <div class="skill-item" data-percent="80">
+              <div class="skill-top"><span>HTML5</span><span class="percent">0%</span></div>
+              <div class="bar"><div class="bar-fill"></div></div>
+            </div>
+            <div class="skill-item" data-percent="75">
+              <div class="skill-top"><span>CSS3</span><span class="percent">0%</span></div>
+              <div class="bar"><div class="bar-fill"></div></div>
+            </div>
+            <div class="skill-item" data-percent="70">
+              <div class="skill-top"><span>JavaScript</span><span class="percent">0%</span></div>
+              <div class="bar"><div class="bar-fill"></div></div>
+            </div>
+            <div class="skill-item" data-percent="65">
+              <div class="skill-top"><span>Bootstrap</span><span class="percent">0%</span></div>
+              <div class="bar"><div class="bar-fill"></div></div>
+            </div>
+            <div class="skill-item" data-percent="60">
+              <div class="skill-top"><span>React</span><span class="percent">0%</span></div>
+              <div class="bar"><div class="bar-fill"></div></div>
+            </div>
+          </div>
+
+          <div class="skill-category glass-card" data-reveal>
+            <h3 class="card-heading">Backend</h3>
+            <div class="skill-item" data-percent="85">
+              <div class="skill-top"><span>Java</span><span class="percent">0%</span></div>
+              <div class="bar"><div class="bar-fill"></div></div>
+            </div>
+            <div class="skill-item" data-percent="80">
+              <div class="skill-top"><span>Spring Boot</span><span class="percent">0%</span></div>
+              <div class="bar"><div class="bar-fill"></div></div>
+            </div>
+            <h3 class="card-heading sub-heading">Database</h3>
+            <div class="skill-item" data-percent="78">
+              <div class="skill-top"><span>SQL</span><span class="percent">0%</span></div>
+              <div class="bar"><div class="bar-fill"></div></div>
+            </div>
+            <div class="skill-item" data-percent="75">
+              <div class="skill-top"><span>MySQL</span><span class="percent">0%</span></div>
+              <div class="bar"><div class="bar-fill"></div></div>
+            </div>
+          </div>
+
+          <div class="skill-category glass-card" data-reveal>
+            <h3 class="card-heading">Tools</h3>
+            <div class="skill-item" data-percent="82">
+              <div class="skill-top"><span>Git</span><span class="percent">0%</span></div>
+              <div class="bar"><div class="bar-fill"></div></div>
+            </div>
+            <div class="skill-item" data-percent="80">
+              <div class="skill-top"><span>GitHub</span><span class="percent">0%</span></div>
+              <div class="bar"><div class="bar-fill"></div></div>
+            </div>
+            <div class="skill-item" data-percent="85">
+              <div class="skill-top"><span>VS Code</span><span class="percent">0%</span></div>
+              <div class="bar"><div class="bar-fill"></div></div>
+            </div>
+            <div class="skill-item" data-percent="70">
+              <div class="skill-top"><span>Eclipse</span><span class="percent">0%</span></div>
+              <div class="bar"><div class="bar-fill"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="container">
+        <p class="section-eyebrow" data-reveal>Things I've built</p>
+        <h2 class="section-title" data-reveal>My <span class="gradient-text">Projects</span></h2>
+
+        <div class="projects-grid" id="projectsGrid">
+          <article class="project-card glass-card" data-reveal>
+            <div class="project-image">
+              <div class="project-placeholder">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="48" height="48"><path d="M4.8 3h14.4A1.8 1.8 0 0 1 21 4.8v14.4A1.8 1.8 0 0 1 19.2 21H4.8A1.8 1.8 0 0 1 3 19.2V4.8A1.8 1.8 0 0 1 4.8 3Z"/><path d="M3 15l4.5-4.5a1.5 1.5 0 0 1 2.12 0L12 12.9l3-3a1.5 1.5 0 0 1 2.12 0L21 13.5"/><circle cx="8" cy="8" r="1.5"/></svg>
+              </div>
+              <span class="project-tag">Featured</span>
+            </div>
+            <div class="project-body">
+              <h3>LifeYN AI</h3>
+              <p class="project-sub">AI-Based Healthcare Support System</p>
+              <p class="project-desc">An AI-powered healthcare web application that predicts diseases based on user symptoms and provides health-related assistance.</p>
+              <div class="tech-tags">
+                <span>Python</span><span>Django</span><span>Machine Learning</span><span>HTML</span><span>CSS</span><span>Bootstrap</span><span>NLP</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/pooja9617" target="_blank" rel="noopener" class="btn-small">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.78-.25.78-.55v-2.15c-3.2.7-3.87-1.34-3.87-1.34-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.72-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.06 11.06 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.27 5.69.42.36.78 1.07.78 2.16v3.2c0 .3.2.66.79.55A11.5 11.5 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5Z"/></svg>
+                  GitHub
+                </a>
+                <a href="#" class="btn-small btn-small-outline">
+                  Live Demo
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Placeholder card for future projects -->
+          <article class="project-card glass-card project-card-empty" data-reveal>
+            <div class="empty-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="40" height="40"><path d="M12 5v14M5 12h14"/></svg>
+            </div>
+            <p>More projects coming soon</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="section">
+      <div class="container">
+        <p class="section-eyebrow" data-reveal>My academic journey</p>
+        <h2 class="section-title" data-reveal>Education</h2>
+
+        <div class="timeline">
+          <div class="timeline-item" data-reveal>
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-card">
+              <span class="timeline-year">2022 – 2026</span>
+              <h3>Bachelor of Engineering</h3>
+              <p class="timeline-sub">Computer Science Engineering</p>
+              <p>Narayanaguru College of Engineering — Anna University</p>
+              <span class="pill">CGPA 8.20</span>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-reveal>
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-card">
+              <span class="timeline-year">2020 – 2022</span>
+              <h3>Higher Secondary</h3>
+              <p class="timeline-sub">State Board</p>
+              <p>NKM Government Higher Secondary School</p>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-reveal>
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-card">
+              <span class="timeline-year">2018 – 2019</span>
+              <h3>SSLC</h3>
+              <p class="timeline-sub">State Board</p>
+              <p>St. John's Higher Secondary School</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <div class="container">
+        <p class="section-eyebrow" data-reveal>Where I've worked</p>
+        <h2 class="section-title" data-reveal>Internship <span class="gradient-text">Experience</span></h2>
+
+        <div class="experience-grid">
+          <div class="experience-card glass-card" data-reveal>
+            <div class="exp-icon">♨️</div>
+            <h3>Java Programming Intern</h3>
+            <p class="exp-company">Srishti Innovative</p>
+            <span class="exp-duration">August 2024</span>
+            <p class="exp-desc">Worked on Java programming fundamentals, building logic-driven scripts and small applications.</p>
+          </div>
+
+          <div class="experience-card glass-card" data-reveal>
+            <div class="exp-icon">🐍</div>
+            <h3>Python Programming Intern</h3>
+            <p class="exp-company">Srishti Innovative</p>
+            <span class="exp-duration">February 2025</span>
+            <p class="exp-desc">Advanced Python concepts including data structures, file handling and problem-solving exercises.</p>
+          </div>
+
+          <div class="experience-card glass-card" data-reveal>
+            <div class="exp-icon">🎨</div>
+            <h3>Web Designing Intern</h3>
+            <p class="exp-company">Srishti Innovative</p>
+            <span class="exp-duration">July 2025</span>
+            <p class="exp-desc">Designed responsive web pages using HTML, CSS and modern layout techniques.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATES -->
+    <section id="certificates" class="section">
+      <div class="container">
+        <p class="section-eyebrow" data-reveal>Verified learning</p>
+        <h2 class="section-title" data-reveal>Certificates</h2>
+
+        <div class="certificates-grid">
+          <div class="certificate-card glass-card" data-reveal>
+            <div class="cert-icon">🏆</div>
+            <h3>UiPath Automation Implementation Methodology Fundamentals</h3>
+            <p class="cert-issuer">UiPath</p>
+          </div>
+          <div class="certificate-card glass-card" data-reveal>
+            <div class="cert-icon">📜</div>
+            <h3>TCS iON Skill Development</h3>
+            <p class="cert-issuer">Tata Consultancy Services</p>
+          </div>
+          <div class="certificate-card glass-card" data-reveal>
+            <div class="cert-icon">🎓</div>
+            <h3>Digital Application Fundamentals</h3>
+            <p class="cert-issuer">NASSCOM</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESUME -->
+    <section id="resume" class="section">
+      <div class="container">
+        <p class="section-eyebrow" data-reveal>Full snapshot</p>
+        <h2 class="section-title" data-reveal>My <span class="gradient-text">Resume</span></h2>
+
+        <div class="resume-card glass-card" data-reveal>
+          <div class="resume-preview">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" width="64" height="64"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h8M8 9h2"/></svg>
+          </div>
+          <div class="resume-info">
+            <h3>Pooja S — Resume</h3>
+            <p>Java & Spring Boot Backend Developer · Computer Science Engineer</p>
+            <div class="resume-buttons">
+              <a href="/Pooja_S_Resume.pdf" target="_blank" class="btn btn-outline">View Resume</a>
+              <a href="/Pooja_S_Resume.pdf" download class="btn btn-primary">Download Resume PDF</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container">
+        <p class="section-eyebrow" data-reveal>Get in touch</p>
+        <h2 class="section-title" data-reveal>Let's <span class="gradient-text">Connect</span></h2>
+
+        <div class="contact-grid">
+          <div class="contact-info" data-reveal>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1.02-.24 11.4 11.4 0 0 0 3.58.57 1 1 0 0 1 1 1v3.5a1 1 0 0 1-1 1C10.7 21 3 13.3 3 3.99a1 1 0 0 1 1-1H7.5a1 1 0 0 1 1 1c0 1.24.2 2.45.57 3.58a1 1 0 0 1-.24 1.02L6.6 10.8Z"/></svg>
+              </div>
+              <div><span>Phone</span><strong>9497057760</strong></div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M1.5 4.5h21c.55 0 1 .45 1 1v13c0 .55-.45 1-1 1h-21c-.55 0-1-.45-1-1v-13c0-.55.45-1 1-1Zm1.06 1.5 9.44 7.09L21.44 6H2.56Zm18.94 1.62-9.03 6.78a1 1 0 0 1-1.2 0L2.5 7.62V18h19V7.62Z"/></svg>
+              </div>
+              <div><span>Email</span><strong>poojasuresh1903@gmail.com</strong></div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2C7.8 2 4.5 5.3 4.5 9.5c0 5.6 6.4 11.5 7 12 .3.3.7.3 1 0 .6-.5 7-6.4 7-12C19.5 5.3 16.2 2 12 2Zm0 10.2a2.7 2.7 0 1 1 0-5.4 2.7 2.7 0 0 1 0 5.4Z"/></svg>
+              </div>
+              <div><span>Location</span><strong>Panachamoodu, Thiruvananthapuram, Kerala</strong></div>
+            </div>
+
+            <div class="contact-socials">
+              <a href="https://github.com/pooja9617" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.78-.25.78-.55v-2.15c-3.2.7-3.87-1.34-3.87-1.34-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.72-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.06 11.06 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.27 5.69.42.36.78 1.07.78 2.16v3.2c0 .3.2.66.79.55A11.5 11.5 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5Z"/></svg>
+              </a>
+              <a href="https://linkedin.com/in/pooja-s-b73a4b309" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>
+              </a>
+              <a href="https://www.instagram.com/pooj.ah.__" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.06 1.97.24 2.43.42.58.22 1 .48 1.44.92.44.44.7.86.92 1.44.18.46.36 1.26.42 2.43.06 1.25.07 1.65.07 4.85s0 3.6-.07 4.85c-.06 1.17-.24 1.97-.42 2.43-.22.58-.48 1-.92 1.44-.44.44-.86.7-1.44.92-.46.18-1.26.36-2.43.42-1.25.06-1.65.07-4.85.07s-3.6 0-4.85-.07c-1.17-.06-1.97-.24-2.43-.42-.58-.22-1-.48-1.44-.92-.44-.44-.7-.86-.92-1.44-.18-.46-.36-1.26-.42-2.43C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.85c.06-1.17.24-1.97.42-2.43.22-.58.48-1 .92-1.44.44-.44.86-.7 1.44-.92.46-.18 1.26-.36 2.43-.42C8.4 2.2 8.8 2.2 12 2.2Zm0 1.8c-3.15 0-3.52 0-4.76.07-1.03.05-1.6.22-1.96.36-.5.19-.85.42-1.22.79-.37.37-.6.72-.79 1.22-.14.37-.31.93-.36 1.96C2.8 9.48 2.8 9.85 2.8 12s0 3.52.07 4.76c.05 1.03.22 1.6.36 1.96.19.5.42.85.79 1.22.37.37.72.6 1.22.79.37.14.93.31 1.96.36 1.24.06 1.6.07 4.76.07s3.52 0 4.76-.07c1.03-.05 1.6-.22 1.96-.36.5-.19.85-.42 1.22-.79.37-.37.6-.72.79-1.22.14-.37.31-.93.36-1.96.06-1.24.07-1.6.07-4.76s0-3.52-.07-4.76c-.05-1.03-.22-1.6-.36-1.96a2.9 2.9 0 0 0-.79-1.22 2.9 2.9 0 0 0-1.22-.79c-.37-.14-.93-.31-1.96-.36C15.52 4 15.15 4 12 4Zm0 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9Zm0 1.8a2.7 2.7 0 1 0 0 5.4 2.7 2.7 0 0 0 0-5.4Zm5.4-2.4a1.08 1.08 0 1 1-2.16 0 1.08 1.08 0 0 1 2.16 0Z"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <form class="contact-form glass-card" id="contactForm" data-reveal>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="What's this about?" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or opportunity..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-submit">
+              <span id="submitText">Send Message</span>
+            </button>
+            <p class="form-status" id="formStatus" role="status"></p>
+          </form>
+        </div>
+
+        <div class="map-placeholder glass-card" data-reveal>
+          <iframe
+            title="Location map"
+            src="https://www.google.com/maps?q=Panachamoodu,Thiruvananthapuram,Kerala&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-glass">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3>Pooja<span class="gradient-text">.S</span></h3>
+          <p>Java & Spring Boot Backend Developer</p>
+        </div>
+
+        <div class="footer-socials">
+          <a href="https://github.com/pooja9617" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.78-.25.78-.55v-2.15c-3.2.7-3.87-1.34-3.87-1.34-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.72-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.06 11.06 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.27 5.69.42.36.78 1.07.78 2.16v3.2c0 .3.2.66.79.55A11.5 11.5 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5Z"/></svg>
+          </a>
+          <a href="https://linkedin.com/in/pooja-s-b73a4b309" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/pooj.ah.__" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.06 1.97.24 2.43.42.58.22 1 .48 1.44.92.44.44.7.86.92 1.44.18.46.36 1.26.42 2.43.06 1.25.07 1.65.07 4.85s0 3.6-.07 4.85c-.06 1.17-.24 1.97-.42 2.43-.22.58-.48 1-.92 1.44-.44.44-.86.7-1.44.92-.46.18-1.26.36-2.43.42-1.25.06-1.65.07-4.85.07s-3.6 0-4.85-.07c-1.17-.06-1.97-.24-2.43-.42-.58-.22-1-.48-1.44-.92-.44-.44-.7-.86-.92-1.44-.18-.46-.36-1.26-.42-2.43C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.85c.06-1.17.24-1.97.42-2.43.22-.58.48-1 .92-1.44.44-.44.86-.7 1.44-.92.46-.18 1.26-.36 2.43-.42C8.4 2.2 8.8 2.2 12 2.2Zm0 1.8c-3.15 0-3.52 0-4.76.07-1.03.05-1.6.22-1.96.36-.5.19-.85.42-1.22.79-.37.37-.6.72-.79 1.22-.14.37-.31.93-.36 1.96C2.8 9.48 2.8 9.85 2.8 12s0 3.52.07 4.76c.05 1.03.22 1.6.36 1.96.19.5.42.85.79 1.22.37.37.72.6 1.22.79.37.14.93.31 1.96.36 1.24.06 1.6.07 4.76.07s3.52 0 4.76-.07c1.03-.05 1.6-.22 1.96-.36.5-.19.85-.42 1.22-.79.37-.37.6-.72.79-1.22.14-.37.31-.93.36-1.96.06-1.24.07-1.6.07-4.76s0-3.52-.07-4.76c-.05-1.03-.22-1.6-.36-1.96a2.9 2.9 0 0 0-.79-1.22 2.9 2.9 0 0 0-1.22-.79c-.37-.14-.93-.31-1.96-.36C15.52 4 15.15 4 12 4Zm0 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9Zm0 1.8a2.7 2.7 0 1 0 0 5.4 2.7 2.7 0 0 0 0-5.4Zm5.4-2.4a1.08 1.08 0 1 1-2.16 0 1.08 1.08 0 0 1 2.16 0Z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Pooja S. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
